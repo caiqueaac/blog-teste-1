@@ -1,0 +1,159 @@
+/* Estrutura */
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "cabecalho cabecalho cabecalho"
+                        "conteudo conteudo lateral";
+    height: 1fr;
+    width: 1fr;
+    margin: 0;
+}
+header {
+    grid-area: cabecalho;
+    width: 100vw;
+    background-color: #3498DB;
+    position: fixed;
+}
+main {
+    background-color: #566573;
+    grid-area: conteudo;
+    margin-top: 2px;
+    height: 100vh;
+}
+aside {
+    background-color: #F0F3F4;
+    grid-area: lateral;
+    margin-top: 2px;
+    margin-left: 2px;
+    height: 100vh;
+}
+
+/* Cabecalho */
+.cabecalho {
+    display: flex;
+}
+header .logo {
+    display: flex;
+    align-items: flex-start;
+    margin: 2.5px;
+    border-radius: 10px;
+    border: solid 2.5px limegreen;
+    box-shadow: 2px 2px 2px #222222;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+}
+.menu-principal {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-left: 20px;
+    font-family: monospace;
+}
+.menu-principal > a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 1rem;
+}
+.menu-principal > a:hover {
+    text-shadow: 2px 2px 2px #222222;
+}
+
+/* Conteudo */
+main {
+    display: flex;
+    flex-direction: column;
+}
+.caixa-post {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: #00FFFF;
+    min-height: 170px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #222222;
+    border: solid 2.5px #0000FF;
+    box-sizing: border-box;
+}
+.item1 {
+    margin-top: 10px;
+}
+.caixa-post > img {
+    display: flex;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+    margin-right: 10px;
+    align-self: flex-start;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #222222;
+    border: solid 2.5px #FF00FF;
+    box-sizing: border-box;
+}
+.materia > .titulo, .texto, .subtitulo {
+    display: flex;
+    color: #020202;
+}
+.materia > .titulo {
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+.materia > .texto {
+    font-size: 1.1rem;
+    font-family: monospace;
+}
+.materia > .texto a {
+    font-size: 1.1rem;
+    font-family: monospace;
+    color: #020202;
+    text-decoration: none;
+}
+.materia > .texto a:hover {
+    color: #fff;
+    text-shadow: 2px 2px 2px #222222;
+}
+.materia > .subtitulo {
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+.materia > .texto {
+    max-height: 45px;
+    overflow: hidden;
+}
+
+/* Lateral */
+aside {
+    display: flex;
+    flex-direction: column;
+}
+.lateral {
+    position: fixed;
+}
+.caixa-categoria {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #020202;
+    font-family: monospace;
+}
+.caixa-pesquisa {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #020202;
+    font-family: monospace;
+}
+.caixa-categoria > ul > li {
+    color: #020202;
+    margin-bottom: 5px;
+}
+.caixa-categoria > ul > li > a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #020202;
+    text-decoration: none;
+    font-size: 1rem;
+}
